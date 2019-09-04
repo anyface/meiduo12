@@ -58,7 +58,7 @@ TEMPLATES = [
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
-            'environment': 'utils.jinja2_env.environment',
+            'environment': 'meiduo_mall.utils.jinja2_env.environment',
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
@@ -120,7 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [
+                    os.path.join(BASE_DIR, 'static'),
+                    ]
 
 #日志
 LOGGING = {
@@ -163,3 +165,6 @@ LOGGING = {
         },
     }
 }
+
+# 指定用户模型类
+AUTH_USER_MODEL = 'users.User'
