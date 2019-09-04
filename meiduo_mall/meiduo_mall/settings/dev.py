@@ -27,6 +27,8 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 # Application definition
+import sys
+sys.path.insert(0, os.path.join(BASE_DIR,'apps'))
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -35,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
